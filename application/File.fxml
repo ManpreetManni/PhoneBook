@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="443.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Contoller">
+   <left>
+      <ScrollPane fx:id="displayNames" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin></ScrollPane>
+   </left>
+   <center>
+      <BorderPane fx:id="displayContact" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <ImageView fitHeight="94.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@userInformation.png" />
+               </image>
+               <BorderPane.margin>
+                  <Insets top="20.0" />
+               </BorderPane.margin>
+            </ImageView>
+         </top>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="name" alignment="CENTER" prefHeight="52.0" prefWidth="406.0" promptText="Name">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="40.0" right="40.0" top="40.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Lucida Bright Demibold" size="36.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="number" alignment="CENTER" prefHeight="53.0" prefWidth="406.0" promptText="Phone Number">
+                     <VBox.margin>
+                        <Insets left="40.0" right="40.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Lucida Bright Demibold" size="36.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+         </center>
+         <bottom>
+            <HBox prefHeight="91.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="editText" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#editContact" text="Save" translateX="70.0">
+                     <font>
+                        <Font name="Lucida Bright Demibold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="30.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="deleteContact" mnemonicParsing="false" onAction="#deleteContact" text="Delete Contact" textFill="#ff2600" translateX="230.0">
+                     <HBox.margin>
+                        <Insets right="20.0" top="30.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Lucida Bright Demibold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </center>
+   <top>
+      <HBox prefHeight="60.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="inputElement" onAction="#searchContact" prefHeight="25.0" prefWidth="294.0" promptText="Search Contact..." translateX="200.0">
+               <font>
+                  <Font name="Lucida Bright Demibold" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#addNewContact" translateX="330.0">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../bin/application/addContact.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
